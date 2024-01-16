@@ -5,22 +5,36 @@
 import random
 
 
-def display_title():
-    print("Welcome to Dice Roller!\nRoll the dice? (y/n:):")
+def displayTitle():
+    while True:
+        cont = print("Welcome to Dice Roller!\nRoll the dice? (y/n:):")
+        if cont != 'y':
+            print("Thanks for playing!")
+            break
+
 
 def roll():
-    random.randint(1,6)
+    return random.randint(1,6)
 
-def roll_dice(): 
-    print('Die 1: f{roll}')
-# def main():
-#     asdfasdf 
+def rollDice(): 
+    die1 = roll()
+    die2 = roll()
+    totalDice = die1 + die2
+    print(f'Die 1: {die1}')
+    print(f'Die 2: {die2}')
+    print(f'Total: {totalDice}')
+    if totalDice == 2 :
+        print('Snake eyes!')
+    elif totalDice == 12 :
+        print('Boxcars!')
 
-roll()
+def main():
+    displayTitle
+    rollDice
 
 
 
 
-# if __name__ == "__main__":
 
-#     main()
+if __name__ == "__main__":
+    main()
