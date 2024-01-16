@@ -52,6 +52,8 @@
 
 # Bye!
 
+## https://www.w3schools.com/python/python_datetime.asp
+
 import datetime
 from datetime import date
 from datetime import datetime as dt
